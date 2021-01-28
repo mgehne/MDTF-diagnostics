@@ -17,7 +17,14 @@ vertical coherence diagnostic also uses data at vertical levels: temperature, sp
 humidity, divergence, zonal and meridional winds. However, it is up to the user to decide
 which variables are most useful to the user's specific application.
 
-tropical_diagnostics
+package requirements
+=======================
+
+
+
+
+nwp_diagnostics
+======================
 Contains the functions and modules necessary to compute the various diagnostics. The main
 diagnostics included are:
 
