@@ -5,23 +5,6 @@ Python scripts for tropical diagnostics of NWP forecasts.
 The diagnostics are meant to be applied to gridded forecast data and example
 scripts are provided to show how to apply the diagnostics at different lead times.
 
-Required model output
-=========================
-Required model output is primarily precipitation. This is enough to compute
-Hovmoeller diagrams and compare to observations and to project onto the convectively
-coupled equatorial wave (CCEW) EOFs to analyze CCEW activity and skill in model
-forecasts.
-
-For space-time coherence spectra two variables at a single vertical level are needed.
-Usually precipitation and divergence at 850hPa or 200hPa are used, but any combination
-of two variables can be used.
-
-For the moisture convection coupling analysis vertical level data of specific humidity (g/kg)
-and temperature (K) are needed, in addition to surface pressure (Pa) and a land-sea mask.
-The vertical coherence diagnostic also uses data at vertical levels: temperature, specific
-humidity, divergence, zonal and meridional winds. However, it is up to the user to decide
-which variables are most useful to the user's specific application.
-
 Version & Contact info
 ----------------------
 
@@ -41,7 +24,6 @@ package requirements
   - plotly-orca
   - ipykernel
   - python-kaleido
-
 
 nwp_diagnostics description of funcionality
 =============================================
@@ -78,3 +60,20 @@ for plotting the circulation in preciptiation - CSF space and the distributions 
 moisture_convection_coupling_plot.py. The example script precip_csf_coupling.py computes CSF from
 model output, bins TRMM precipitation against model CSF and plots the results. B_L_analysis.py shows
 how to run the B_L analysis scripts and plots results.
+
+Required model output
+=========================
+Required model output is primarily precipitation. This is enough to compute
+Hovmoeller diagrams and compare to observations and to project onto the convectively
+coupled equatorial wave (CCEW) EOFs to analyze CCEW activity and skill in model
+forecasts.
+
+For space-time coherence spectra two variables at a single vertical level are needed.
+Usually precipitation and divergence at 850hPa or 200hPa are used, but any combination
+of two variables can be used.
+
+For the moisture convection coupling analysis vertical level data of specific humidity (g/kg)
+and temperature (K) are needed, in addition to surface pressure (Pa) and a land-sea mask.
+The vertical coherence diagnostic also uses data at vertical levels: temperature, specific
+humidity, divergence, zonal and meridional winds. However, it is up to the user to decide
+which variables are most useful to the user's specific application.
