@@ -1,30 +1,50 @@
 nwp_diagnostics
 ==============================
-
 Python scripts for tropical diagnostics of NWP forecasts.
 
 The diagnostics are meant to be applied to gridded forecast data and example
 scripts are provided to show how to apply the diagnostics at different lead times.
 
+Required model output
+=========================
 Required model output is primarily precipitation. This is enough to compute
 Hovmoeller diagrams and compare to observations and to project onto the convectively
 coupled equatorial wave (CCEW) EOFs to analyze CCEW activity and skill in model
 forecasts.
 
-For the moisture convection coupling analysis vertical level data of specific humidity
-and temperature are needed, in addition to surface pressure and a land-sea mask. The
-vertical coherence diagnostic also uses data at vertical levels: temperature, specific
+For space-time coherence spectra two variables at a single vertical level are needed.
+Usually precipitation and divergence at 850hPa or 200hPa are used, but any combination
+of two variables can be used.
+
+For the moisture convection coupling analysis vertical level data of specific humidity (g/kg)
+and temperature (K) are needed, in addition to surface pressure (Pa) and a land-sea mask.
+The vertical coherence diagnostic also uses data at vertical levels: temperature, specific
 humidity, divergence, zonal and meridional winds. However, it is up to the user to decide
 which variables are most useful to the user's specific application.
 
+Version & Contact info
+----------------------
+
+- Version 1 January 2020 Maria Gehne (CIRES CU Boulder and PSL NOAA)
+- Current developer: Maria Gehne (maria.gehne@noaa.gov)
+- Contributors: Brandon Wolding (CIRES CU Boulder and PSL NOAA), Juliana Dias (PSL NOAA), George Kiladis (PSL NOAA)
+
 package requirements
 =======================
+  - xarray
+  - scipy
+  - pandas
+  - netcdf4
+  - matplotlib
+  - pynio
+  - pyngl
+  - plotly-orca
+  - ipykernel
+  - python-kaleido
 
 
-
-
-nwp_diagnostics
-======================
+nwp_diagnostics description of funcionality
+=============================================
 Contains the functions and modules necessary to compute the various diagnostics. The main
 diagnostics included are:
 
